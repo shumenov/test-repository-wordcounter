@@ -1,5 +1,7 @@
 package com.example.wordcounter;
 
+import org.apache.commons.text.StrTokenizer;
+
 public class App 
 {
     public static void main( String[] args )
@@ -8,6 +10,7 @@ public class App
     }
     
     public static int wordcount(String s) {
-        return 0;
+    	StrTokenizer token = new StrTokenizer(s, ' ');
+		return token.size();
     }
 }
